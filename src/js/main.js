@@ -12,10 +12,12 @@
                 });
             }
         },
-        animatePanel(element, panel){
-            for(const elmnt of panel){
-                elmnt.classList.remove('open');
-                elmnt.classList.remove('open-active');
+        animatePanel: function (element, panel) {
+            for (const elmnt of panel) {
+                if (elmnt.classList.contains("open")) {
+                    elmnt.classList.remove('open');
+                    elmnt.classList.remove('open-active');
+                }
             }
             element.classList.add("open");
         },
